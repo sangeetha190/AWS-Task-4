@@ -1,10 +1,10 @@
 # AWS-Task-4
-1️⃣ Launch EC2 Instances (Linux & Windows)
-2️⃣ Set Up a Web Server on Both Instances
-3️⃣ Create and Attach a 5GB EBS Volume
-4️⃣ Format & Mount the Volume on Linux & Windows
-5️⃣ Take a Snapshot of the EBS Volume
-6️⃣ Create a New EBS Volume from the Snapshot & Attach It
+- 1️⃣ Launch EC2 Instances (Linux & Windows)
+- 2️⃣ Set Up a Web Server on Both Instances
+- 3️⃣ Create and Attach a 5GB EBS Volume
+- 4️⃣ Format & Mount the Volume on Linux & Windows
+- 5️⃣ Take a Snapshot of the EBS Volume
+- 6️⃣ Create a New EBS Volume from the Snapshot & Attach It
 
 - 🛠 Step 1: Launch EC2 Instances (Linux & Windows)
 - 📍 Where? AWS Console → EC2 → Launch Instance
