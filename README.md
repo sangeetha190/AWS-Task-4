@@ -87,7 +87,7 @@ VM connect with index.html output
       - This will show a list of all available disks.
       - Identify the disk number of the 5GB volume (e.g., Disk 1).
    - Select the Disk
-      - select disk 1 ![select disk 1](https://img.shields.io/badge/list%20disk-red)
+      - select disk 1 ![select disk 1](https://img.shields.io/badge/select%20disk%201-red)
       - This selects the Disk 1 (5GB EBS Volume).
    - Bring the disk online by typing:
       - <b>online disk</b> ![online disk](https://img.shields.io/badge/list%20disk-red)
