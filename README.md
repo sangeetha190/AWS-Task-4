@@ -28,14 +28,30 @@
 ![image](https://github.com/user-attachments/assets/c3324453-5990-492d-a615-d13b9ecd1a8c)
 ![image](https://github.com/user-attachments/assets/dc4a9e50-ffe3-4d28-8c0f-91f91b289c39)
 
-
+- 🛠 Step 2: Set Up Web Server on Both Instances
+ 🔹 For Windows:
+   - Open Server Manager → Add Roles and Features
+   - Install IIS Web Server
+   - Edit the file at C:\inetpub\wwwroot\index.html:
+   - <h1>Welcome to My Windows Web Server</h1>
+   - Verify by opening the public IP in a browser ✅
 
 VM connect with index.html output
 ![image](https://github.com/user-attachments/assets/d0c7b289-1b11-4633-99b0-c9cdad5efd9b)
+ 🔹 For Linux:
+   - Open Putty using the username and password key
+   - Install Apache (httpd)
+       - sudo yum update -y
+       - sudo yum install -y httpd
+       - sudo systemctl start httpd
+       - sudo systemctl enable httpd
+   - Create a test webpage:
+       - echo "<h1>Welcome to My Linux Web Server</h1>" | sudo tee /var/www/html/index.html
+   - Verify by opening the public IP in a browser ✅
 
 ![image](https://github.com/user-attachments/assets/0db2b50a-dcd5-481c-aa4d-b63f9b4cd9b7)
 ![image](https://github.com/user-attachments/assets/a1c18f1a-6a88-4926-85bd-f7e0f7c4a423)
 
 
 ![image](https://github.com/user-attachments/assets/1eb5e079-6fd0-48a3-aa95-4b0b18c8886f)
-
+🛠 Step 3: Create & Attach a 5GB EBS Volume
