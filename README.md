@@ -283,3 +283,9 @@ snapshot attach to the windows VM
 
 
 
+new instance 
+![image](https://github.com/user-attachments/assets/7fe7eacd-3cfc-49a6-866b-eda0c2dc1397)
+
+![image](https://github.com/user-attachments/assets/dfb62ac7-0b08-44da-ab76-9c2b31404487)
+
+
