@@ -169,17 +169,62 @@ VM connect with index.html output
 - Select the EBS Volume You Want to Snapshot
   - Find the volume attached to your EC2 instance (Linux or Windows).
   - Right-click → Create Snapshot.
-  - Configure Snapshot Details
    ![image](https://github.com/user-attachments/assets/385af653-df4e-4de5-a7b1-b671c00fc17c)
+- Configure Snapshot Details
+  - Name & Description → Give a meaningful name like:
+    - "Windows-Data-Snapshot"
+    - "Linux-Data-Snapshot"
+- Leave other settings default.
+- Click Create Snapshot
+   - It will take some time depending on the volume size.
+   - Check progress in Snapshots tab under Elastic Block Store.
+![image](https://github.com/user-attachments/assets/cba5d73e-ece3-4456-bc99-4f4c04852152)
+### Linux
+![image](https://github.com/user-attachments/assets/cde90301-0f79-430d-9ae8-33f7a5719a6b)
+![image](https://github.com/user-attachments/assets/d01507d5-c11c-46d6-9863-0832c1f30861)
 
-Name & Description → Give a meaningful name like:
-"Windows-Data-Snapshot"
-"Linux-Data-Snapshot"
-Leave other settings default.
-Click Create Snapshot
 
-It will take some time depending on the volume size.
-Check progress in Snapshots tab under Elastic Block Store.
+- 🛠 Step 6: Create a New EBS Volume from the Snapshot
+ - 📍 Where? AWS Console → EC2 → Snapshots
+ - Once the snapshot is ready, we will create a new EBS volume using this snapshot.
+ ![image](https://github.com/user-attachments/assets/8b467122-25b9-46b4-b089-ed39103d867e) 
+ - Go to Snapshots and select the one you created
+ - Click Actions → Create <b>Volume from Snapshot</b>
+![image](https://github.com/user-attachments/assets/39fc9329-9619-4d2e-833b-48cb94fa2683)
+   - A new window will open.
+ - Configure the Volume Settings
+   - Volume Type: gp3 (General Purpose SSD)
+   - Size: Keep 5GB (default from the snapshot)
+   - Availability Zone: Same as your EC2 instance (Windows/Linux)
+     - If your instance is in ap-south-1b, select the same
+![image](https://github.com/user-attachments/assets/7f49de5c-f846-46ba-bcaa-6d677e4afc70)
+ - Click Create Volume ✅
+    - This will create a new EBS volume from the snapshot.
+ - Attach New Volume to EC2
+   - Go to EBS → Volumes
+   - Select New Volume → Click Attach Volume
+   - Choose EC2 Instance
+   - Click Attach ✅
+- ✅ The new volume is now attached!
+
+![image](https://github.com/user-attachments/assets/5b5f598b-dfea-4f6d-b6cf-684f0f3c6c21)
+![image](https://github.com/user-attachments/assets/f1415b80-614a-4b71-a41c-0ce87774d202)
+![image](https://github.com/user-attachments/assets/11a243af-1798-4c66-a14a-0bd3e5b513c6)
+
+
+
+After Attaching, Verify in Windows
+- 1️⃣ Log into your Windows EC2 instance via Remote Desktop (RDP).
+- 2️⃣ Open Disk Management:
+   - Press Win + R, type diskmgmt.msc, and press Enter.
+   - ![image](https://github.com/user-attachments/assets/4bea5ab4-c0f5-4a54-b977-ac8602a4b359)
+- 3️⃣ Check if the new volume appears as "Unallocated".
+- 4️⃣ If unallocated, right-click on it → Select "New Simple Volume" → Format as NTFS.
+
+
+
+
+
 
 
 
