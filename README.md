@@ -242,5 +242,32 @@ Since you have two new volumes (D: and S:), decide which one to snapshot.
  - If the file disappears after reboot, then the volume was not mounted correctly, or another issue needs troubleshooting.
 ![image](https://github.com/user-attachments/assets/db75ee7a-9c25-4f0d-a6c2-906bae3e8b05)
 
+==============================================================================
+- 🔹 Step 1: Verify If a Snapshot Exists for Volume S
+- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Snapshots
+- 2️⃣ Check if a snapshot for Volume S exists
+
+   - If a snapshot exists before file creation, take a new snapshot.
+   - If the snapshot was taken after file creation, proceed to the next step.
+   - ✅ If no snapshot exists or an old one was taken, create a new snapshot now before rebooting.
+
+- 🔹 Step 2: Take a New Snapshot of Volume S (if needed)
+   - If the snapshot was taken before creating "Sangeetha_text_file.txt," take a new one:
+
+- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Volumes
+- 2️⃣ Find Volume S
+- 3️⃣ Right-click → Create Snapshot
+- 4️⃣ Enter a description (e.g., "Snapshot_after_file_creation")
+- 5️⃣ Click Create Snapshot
+
+- ✅ This ensures that the snapshot includes the latest files.
+
+
+![image](https://github.com/user-attachments/assets/a6aadd8d-1e4a-4ed6-9907-9dca25dc2f53)
+
+![image](https://github.com/user-attachments/assets/be65f80d-2132-4b00-97eb-8ddffa22429c)
+
+![image](https://github.com/user-attachments/assets/d6e333bf-a49b-4bb6-8903-9090aa8e0771)
+
 
 
