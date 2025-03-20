@@ -64,9 +64,24 @@ VM connect with index.html output
  - Click Create
   ![image](https://github.com/user-attachments/assets/36657366-bff0-4111-bed0-7db9f2b5a74b)
  - Select the created volume → Click Actions → Attach Volume
+ - ![image](https://github.com/user-attachments/assets/334e188a-7b81-4b1e-908e-6789b994ffa7)
  - Select your Linux or Windows EC2 instance
  - Click Attach ✅
    - ✅ The volume is now attached but needs to be formatted and mounted.
-  ![image](https://github.com/user-attachments/assets/334e188a-7b81-4b1e-908e-6789b994ffa7)
+   ![image](https://github.com/user-attachments/assets/78c6081d-b908-4bcd-bcbd-16c79891c978)
+
+![image](https://github.com/user-attachments/assets/e8d3d9bf-db78-498a-9840-d87e5cc8cbad)
+
+- 🛠 Follow these steps:
+- Open Command Prompt as Administrator
+
+   - Click on the Start menu 🔎
+   - Search for cmd
+   - Right-click on Command Prompt and select Run as administrator.
+   - Open DiskPart
+   - Type the following command and press Enter: <b>diskpart</b>
+   
+
+
 
 
