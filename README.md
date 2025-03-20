@@ -272,3 +272,14 @@ Since you have two new volumes (D: and S:), decide which one to snapshot.
 
 ![image](https://github.com/user-attachments/assets/d903b129-f1ef-4d80-ae86-faeb71ba9062)
 
+
+snapshot attach to the windows VM
+![image](https://github.com/user-attachments/assets/3a6c5ea3-7994-4c2f-893c-edceae36eb82)
+![image](https://github.com/user-attachments/assets/7cc18f9c-c8f9-424b-add7-fd1194e1ef97)
+![image](https://github.com/user-attachments/assets/888fd85f-cf1d-40f9-899a-3e33399d0485)
+![image](https://github.com/user-attachments/assets/51d3a831-8d35-458d-ab67-501689a3de1d)
+![image](https://github.com/user-attachments/assets/85707840-3861-431f-b385-ef181e2d2def)
+
+
+
+
