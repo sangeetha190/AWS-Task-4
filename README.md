@@ -109,6 +109,25 @@ VM connect with index.html output
    ![image](https://github.com/user-attachments/assets/bb876aa6-c277-4a52-8b98-de6bebd4fd26)
 
 
+- 🛠 Step 4: Format & Mount the EBS Volume
+- 🔹 For Linux:
+  - 📍 Where? Connect via SSH
+   - Check the attached volume:
+   - <b>lsblk</b>
+   - You will see something like /dev/xvdf
+ - Format the volume
+   - <b>sudo mkfs -t ext4 /dev/xvdf</b>
+ - Create a mount point & mount it:
+   - <b>sudo mkdir /mydata
+   - sudo mount /dev/xvdf /mydata</b>
+ - Make it permanent (optional):
+   - <b>echo "/dev/xvdf /mydata ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab</b>
+ - xvb
+ - vcn
+
+
+ - 
+
 
 
 
