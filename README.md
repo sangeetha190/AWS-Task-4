@@ -154,6 +154,7 @@ VM connect with index.html output
     - Run this command: <b>df -h</b>
     - ✅ You should see /mnt/data listed with 5GB available.
 ![image](https://github.com/user-attachments/assets/22cd959e-3bb9-42de-b794-4aa2e84fcb1b)
+![image](https://github.com/user-attachments/assets/ab88f071-5695-4417-8f6a-20edf3e7b19f)
 
 - 🛠 Step 5: Take a Snapshot of EBS Volume
 ### How to Take a Snapshot in AWS
@@ -175,7 +176,6 @@ VM connect with index.html output
 ### Linux
 ![image](https://github.com/user-attachments/assets/cde90301-0f79-430d-9ae8-33f7a5719a6b)
 ![image](https://github.com/user-attachments/assets/d01507d5-c11c-46d6-9863-0832c1f30861)
-
 
 - 🛠 Step 6: Create a New EBS Volume from the Snapshot
  - 📍 Where? AWS Console → EC2 → Snapshots
@@ -218,7 +218,7 @@ After Attaching, Verify in Windows
 
 
 ![image](https://github.com/user-attachments/assets/4fee2731-b29f-48d0-a480-4e1fba594f5a)
-![image](https://github.com/user-attachments/assets/ab88f071-5695-4417-8f6a-20edf3e7b19f)
+
 - Step 7: Take a Snapshot of the New Volume
 - Since you have two new volumes (D: and S:), decide which one to snapshot.
 
