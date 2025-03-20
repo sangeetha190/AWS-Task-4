@@ -80,7 +80,7 @@ VM connect with index.html output
    - Right-click on Command Prompt and select Run as administrator.
    - Open DiskPart
    - Type the following command and press Enter:
-   - <b>diskpart</b>  ![diskpart](https://img.shields.io/badge/list%20disk-red)
+   - <b>diskpart</b>  ![diskpart](https://img.shields.io/badge/diskpart-red)
    - List Available Disks
       - <b>list disk</b>
       - ![list disk](https://img.shields.io/badge/list%20disk-red)
@@ -90,13 +90,13 @@ VM connect with index.html output
       - select disk 1 ![select disk 1](https://img.shields.io/badge/select%20disk%201-red)
       - This selects the Disk 1 (5GB EBS Volume).
    - Bring the disk online by typing:
-      - <b>online disk</b> ![online disk](https://img.shields.io/badge/list%20disk-red)
+      - <b>online disk</b> ![online disk](https://img.shields.io/badge/online%20disk-red)
       - This will attempt to bring the disk online.
    - If it still doesn’t work, clear any read-only attributes:
-      - attributes disk clear readonly ![attributes disk clear readonly](https://img.shields.io/badge/list%20disk-red)
+      - attributes disk clear readonly ![attributes disk clear readonly](https://img.shields.io/badge/attributes%20disk%20clear%20readonly-red)
    - Now check if the disk is online by typing: <b>list disk</b>
       - If Disk 1 now shows as Online, proceed to the next steps.
-   - Now, initialize the disk (if required) by typing: <b>convert gpt</b> ![convert gpt](https://img.shields.io/badge/list%
+   - Now, initialize the disk (if required) by typing: <b>convert gpt</b> ![online disk](https://img.shields.io/badge/convert%20gpt-red)
    - Go back to Disk Management and try creating a New Simple Volume.
    - ✅ Expected Outcome:
       - Disk 1 should now be Online.
