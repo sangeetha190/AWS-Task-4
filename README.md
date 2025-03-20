@@ -33,11 +33,15 @@
    - Open Server Manager → Add Roles and Features
    - Install IIS Web Server
    - Edit the file at C:\inetpub\wwwroot\index.html:
-   - <h1>Welcome to My Windows Web Server</h1>
+   - <p>Welcome to My Windows Web Server</p>
    - Verify by opening the public IP in a browser ✅
 
 VM connect with index.html output
 ![image](https://github.com/user-attachments/assets/d0c7b289-1b11-4633-99b0-c9cdad5efd9b)
+
+
+![image](https://github.com/user-attachments/assets/0db2b50a-dcd5-481c-aa4d-b63f9b4cd9b7)
+![image](https://github.com/user-attachments/assets/a1c18f1a-6a88-4926-85bd-f7e0f7c4a423)
  🔹 For Linux:
    - Open Putty using the username and password key
    - Install Apache (httpd)
@@ -46,12 +50,7 @@ VM connect with index.html output
        - sudo systemctl start httpd
        - sudo systemctl enable httpd
    - Create a test webpage:
-       - echo "<h1>Welcome to My Linux Web Server</h1>" | sudo tee /var/www/html/index.html
+       - echo "<p>Welcome to My Linux Web Server</p>" | sudo tee /var/www/html/index.html
    - Verify by opening the public IP in a browser ✅
-
-![image](https://github.com/user-attachments/assets/0db2b50a-dcd5-481c-aa4d-b63f9b4cd9b7)
-![image](https://github.com/user-attachments/assets/a1c18f1a-6a88-4926-85bd-f7e0f7c4a423)
-
-
 ![image](https://github.com/user-attachments/assets/1eb5e079-6fd0-48a3-aa95-4b0b18c8886f)
 🛠 Step 3: Create & Attach a 5GB EBS Volume
