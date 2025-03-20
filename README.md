@@ -228,7 +228,19 @@ Since you have two new volumes (D: and S:), decide which one to snapshot.
 4️⃣ Enter a name/description (e.g., "Windows-Snapshot").
 5️⃣ Click "Create Snapshot" and wait for completion.
 
+![image](https://github.com/user-attachments/assets/ab88f071-5695-4417-8f6a-20edf3e7b19f)
 
+
+- Before Reboot (Windows Test):
+![image](https://github.com/user-attachments/assets/ca589e87-9e24-4bde-9d4a-bdf240fa709c)
+- Reboot the Windows VM:
+   - This simulates a real-world scenario where an instance might be restarted.
+- After Reboot (Windows Test):
+  - You checked if the file is still present in Volume D.
+  - ✅ Expected Outcome:
+ - If the file exists after reboot, then the EBS volume is correctly attached and persistent.
+ - If the file disappears after reboot, then the volume was not mounted correctly, or another issue needs troubleshooting.
+![image](https://github.com/user-attachments/assets/db75ee7a-9c25-4f0d-a6c2-906bae3e8b05)
 
 
 
