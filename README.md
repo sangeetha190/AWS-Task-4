@@ -80,7 +80,38 @@ VM connect with index.html output
    - Right-click on Command Prompt and select Run as administrator.
    - Open DiskPart
    - Type the following command and press Enter: <b>diskpart</b>
-   
+   - List Available Disks
+      - <i>list disk</i>
+      - This will show a list of all available disks.
+      - Identify the disk number of the 5GB volume (e.g., Disk 1).
+   - Select the Disk
+      - select disk 1
+      - This selects the Disk 1 (5GB EBS Volume).
+   - Bring the disk online by typing:
+      - <i>online disk</i>
+      - This will attempt to bring the disk online.
+   - If it still doesn’t work, clear any read-only attributes:
+      - attributes disk clear readonly
+   - Now check if the disk is online by typing: <b>list disk</b>
+      - If Disk 1 now shows as Online, proceed to the next steps.
+   - Now, initialize the disk (if required) by typing: <b>convert gpt</b>
+   - Go back to Disk Management and try creating a New Simple Volume.
+   - ✅ Expected Outcome:
+      - Disk 1 should now be Online.
+      - You should be able to right-click on the Unallocated 5GB and select "New Simple Volume" to format it.
+   ![image](https://github.com/user-attachments/assets/6f17adb5-cf8a-4d75-8183-7b4b3b1d45e2)
+   ![image](https://github.com/user-attachments/assets/68e2f12f-0c67-43fd-bc3a-3a5bb583f2b5)
+   ![image](https://github.com/user-attachments/assets/e1cd7c6f-fe93-4905-b8f3-4a8a3132a630)
+   ![image](https://github.com/user-attachments/assets/05fb8159-5b20-46b9-9393-dfa381b023be)
+   ![image](https://github.com/user-attachments/assets/8c33422a-3cbc-4dde-9972-0d4b3ab6397c)
+   ![image](https://github.com/user-attachments/assets/f15a373a-e2ed-43be-bee4-cf1083a00306)
+   ![image](https://github.com/user-attachments/assets/bb876aa6-c277-4a52-8b98-de6bebd4fd26)
+
+
+
+
+
+
 
 
 
