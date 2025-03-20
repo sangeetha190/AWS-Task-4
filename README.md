@@ -222,7 +222,7 @@ After Attaching, Verify in Windows
    - ![image](https://github.com/user-attachments/assets/4bea5ab4-c0f5-4a54-b977-ac8602a4b359)
 - 3️⃣ Check if the new volume appears as "Unallocated".
 - 4️⃣ If unallocated, right-click on it → Select "New Simple Volume" → Format as NTFS.
- follow the "Open Command Prompt as Administrator to make Disk to Online" this steps
+- Follow the "Open Command Prompt as Administrator to make Disk to Online" this steps
 ![image](https://github.com/user-attachments/assets/5798aec7-14d0-409d-bfde-2633add94048)
 
 
