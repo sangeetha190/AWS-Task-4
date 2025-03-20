@@ -218,49 +218,19 @@ After Attaching, Verify in Windows
 
 
 ![image](https://github.com/user-attachments/assets/4fee2731-b29f-48d0-a480-4e1fba594f5a)
-Step 7: Take a Snapshot of the New Volume
-Since you have two new volumes (D: and S:), decide which one to snapshot.
-
-📌 How to Take a Snapshot in AWS
-1️⃣ Go to EC2 Dashboard → Elastic Block Store (EBS) → Volumes.
-2️⃣ Select the volume you want to take a snapshot of (e.g., D: or S:).
-3️⃣ Click "Actions" → "Create Snapshot".
-4️⃣ Enter a name/description (e.g., "Windows-Snapshot").
-5️⃣ Click "Create Snapshot" and wait for completion.
-
 ![image](https://github.com/user-attachments/assets/ab88f071-5695-4417-8f6a-20edf3e7b19f)
+- Step 7: Take a Snapshot of the New Volume
+- Since you have two new volumes (D: and S:), decide which one to snapshot.
+
+- 📌 How to Take a Snapshot in AWS
+- 1️⃣ Go to EC2 Dashboard → Elastic Block Store (EBS) → Volumes.
+- 2️⃣ Select the volume you want to take a snapshot of (e.g., D: or S:).
+- 3️⃣ Click "Actions" → "Create Snapshot".
+- 4️⃣ Enter a name/description (e.g., "Windows-Snapshot").
+- 5️⃣ Click "Create Snapshot" and wait for completion.
 
 
-- Before Reboot (Windows Test):
-![image](https://github.com/user-attachments/assets/ca589e87-9e24-4bde-9d4a-bdf240fa709c)
-- Reboot the Windows VM:
-   - This simulates a real-world scenario where an instance might be restarted.
-- After Reboot (Windows Test):
-  - You checked if the file is still present in Volume D.
-  - ✅ Expected Outcome:
- - If the file exists after reboot, then the EBS volume is correctly attached and persistent.
- - If the file disappears after reboot, then the volume was not mounted correctly, or another issue needs troubleshooting.
-![image](https://github.com/user-attachments/assets/db75ee7a-9c25-4f0d-a6c2-906bae3e8b05)
 
-==============================================================================
-- 🔹 Step 1: Verify If a Snapshot Exists for Volume S
-- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Snapshots
-- 2️⃣ Check if a snapshot for Volume S exists
-
-   - If a snapshot exists before file creation, take a new snapshot.
-   - If the snapshot was taken after file creation, proceed to the next step.
-   - ✅ If no snapshot exists or an old one was taken, create a new snapshot now before rebooting.
-
-- 🔹 Step 2: Take a New Snapshot of Volume S (if needed)
-   - If the snapshot was taken before creating "Sangeetha_text_file.txt," take a new one:
-
-- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Volumes
-- 2️⃣ Find Volume S
-- 3️⃣ Right-click → Create Snapshot
-- 4️⃣ Enter a description (e.g., "Snapshot_after_file_creation")
-- 5️⃣ Click Create Snapshot
-
-- ✅ This ensures that the snapshot includes the latest files.
 
 
 ![image](https://github.com/user-attachments/assets/a6aadd8d-1e4a-4ed6-9907-9dca25dc2f53)
@@ -283,16 +253,12 @@ snapshot attach to the windows VM
 
 
 
-new instance 
+## Launch a new EC2 instance and attach the EBS volume created from the snapshot to it.
 ![image](https://github.com/user-attachments/assets/7fe7eacd-3cfc-49a6-866b-eda0c2dc1397)
 
 ![image](https://github.com/user-attachments/assets/dfb62ac7-0b08-44da-ab76-9c2b31404487)
-
-
-========================================================
-- 🛠 Steps to Attach a Snapshot to the Same Instance
-- (You already have an EC2 instance and a snapshot of the EBS volume)
-
+=====================================================================================
+###  🛠 Steps to Attach a Snapshot to the Same Instance
 - Step 1: Create a New Volume from the Snapshot
 - 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Snapshots
 - 2️⃣ Select the Snapshot you created earlier.
