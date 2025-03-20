@@ -270,4 +270,5 @@ Since you have two new volumes (D: and S:), decide which one to snapshot.
 ![image](https://github.com/user-attachments/assets/d6e333bf-a49b-4bb6-8903-9090aa8e0771)
 
 
+![image](https://github.com/user-attachments/assets/d903b129-f1ef-4d80-ae86-faeb71ba9062)
 
