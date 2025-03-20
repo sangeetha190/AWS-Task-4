@@ -81,7 +81,7 @@ VM connect with index.html output
    - Open DiskPart
    - Type the following command and press Enter: <b>diskpart</b>
    - List Available Disks
-      - <i>list disk</i>
+      - <b style="color:red">list disk</b>
       - This will show a list of all available disks.
       - Identify the disk number of the 5GB volume (e.g., Disk 1).
    - Select the Disk
@@ -221,6 +221,7 @@ After Attaching, Verify in Windows
 - 3️⃣ Check if the new volume appears as "Unallocated".
 - 4️⃣ If unallocated, right-click on it → Select "New Simple Volume" → Format as NTFS.
 
+![image](https://github.com/user-attachments/assets/5798aec7-14d0-409d-bfde-2633add94048)
 
 
 
