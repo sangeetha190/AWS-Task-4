@@ -289,3 +289,54 @@ new instance
 ![image](https://github.com/user-attachments/assets/dfb62ac7-0b08-44da-ab76-9c2b31404487)
 
 
+========================================================
+- 🛠 Steps to Attach a Snapshot to the Same Instance
+- (You already have an EC2 instance and a snapshot of the EBS volume)
+
+- Step 1: Create a New Volume from the Snapshot
+- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Snapshots
+- 2️⃣ Select the Snapshot you created earlier.
+- 3️⃣ Click Actions → Create Volume from Snapshot
+- 4️⃣ In the Create Volume page:
+
+- Volume Type: General Purpose SSD (gp3)
+- Size: Keep the same (5GB)
+- Availability Zone: Make sure it is the same as your instance
+- Click Create Volume ✅
+![image](https://github.com/user-attachments/assets/4de33065-82aa-4d9a-a82c-645a5402d725)
+
+![image](https://github.com/user-attachments/assets/130e55e8-d0dd-4f20-b623-f06ef034b289)
+
+- Step 2: Attach the New Volume to the Same EC2 Instance
+- 1️⃣ Go to AWS Console → EC2 → Elastic Block Store (EBS) → Volumes
+- 2️⃣ Find the newly created volume (status will be "Available").
+- 3️⃣ Select it and click Actions → Attach Volume
+
+![image](https://github.com/user-attachments/assets/c0f370db-9afb-4271-8365-b4e636486d1c)
+
+- 4️⃣ Choose your original EC2 instance from the dropdown.
+- 5️⃣ Set Device Name:
+
+- For Linux: /dev/xvdf or /dev/sdf
+- For Windows: xvde
+- 6️⃣ Click Attach Volume ✅
+
+![image](https://github.com/user-attachments/assets/908fa2e7-9599-41c7-bc05-2d0eb4ffd103)
+
+- Step 3: Mount the Volume in the OS
+- (Now the volume is attached, but the OS needs to recognize it)
+
+- For Windows EC2 Instance
+- 1️⃣ Log in to Windows via RDP.
+- 2️⃣ Open Disk Management (diskmgmt.msc from Run).
+
+![image](https://github.com/user-attachments/assets/b552a30a-51da-4655-ba8e-b66b72963bce)
+
+- 3️⃣ You will see the new disk as "Unallocated".
+- 4️⃣ Right-click the disk and choose Online (if it's offline).
+
+![image](https://github.com/user-attachments/assets/6032f153-b813-4f55-86db-d628433d2fda)
+
+- 5️⃣ Right-click the volume → Choose Change Drive Letter & Paths.
+- 6️⃣ Assign a letter (e.g., E:) and click OK.
+- 7️⃣ Open File Explorer → Check if your backup file is restored! 🎉
