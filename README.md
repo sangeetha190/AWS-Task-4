@@ -87,13 +87,13 @@ VM connect with index.html output
       - This will show a list of all available disks.
       - Identify the disk number of the 5GB volume (e.g., Disk 1).
    - Select the Disk
-      - select disk 1 ![select disk 1](https://img.shields.io/badge/select%20disk%201-red)
+      - <b>select disk 1</b> ![select disk 1](https://img.shields.io/badge/select%20disk%201-red)
       - This selects the Disk 1 (5GB EBS Volume).
    - Bring the disk online by typing:
       - <b>online disk</b> ![online disk](https://img.shields.io/badge/online%20disk-red)
       - This will attempt to bring the disk online.
    - If it still doesn’t work, clear any read-only attributes:
-      - attributes disk clear readonly ![attributes disk clear readonly](https://img.shields.io/badge/attributes%20disk%20clear%20readonly-red)
+      - <b>attributes disk clear readonly</b> ![attributes disk clear readonly](https://img.shields.io/badge/attributes%20disk%20clear%20readonly-red)
    - Now check if the disk is online by typing: <b>list disk</b>
       - If Disk 1 now shows as Online, proceed to the next steps.
    - Now, initialize the disk (if required) by typing: <b>convert gpt</b> ![online disk](https://img.shields.io/badge/convert%20gpt-red)
@@ -222,7 +222,7 @@ After Attaching, Verify in Windows
    - ![image](https://github.com/user-attachments/assets/4bea5ab4-c0f5-4a54-b977-ac8602a4b359)
 - 3️⃣ Check if the new volume appears as "Unallocated".
 - 4️⃣ If unallocated, right-click on it → Select "New Simple Volume" → Format as NTFS.
-
+ follow the "Open Command Prompt as Administrator to make Disk to Online" this steps
 ![image](https://github.com/user-attachments/assets/5798aec7-14d0-409d-bfde-2633add94048)
 
 
