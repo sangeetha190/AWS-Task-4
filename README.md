@@ -50,7 +50,8 @@ VM connect with index.html output
        - sudo systemctl start httpd
        - sudo systemctl enable httpd
    - Create a test webpage:
-       - echo "<p>Welcome to My Linux Web Server</p>" | sudo tee /var/www/html/index.html
+       - echo "<p>Welcome to My Linux Web Server</p>" 
+       - | sudo tee /var/www/html/index.html
    - Verify by opening the public IP in a browser ✅
 ![image](https://github.com/user-attachments/assets/1eb5e079-6fd0-48a3-aa95-4b0b18c8886f)
 🛠 Step 3: Create & Attach a 5GB EBS Volume
