@@ -150,16 +150,36 @@ VM connect with index.html output
     - <b>sudo mount /dev/xvdf /mnt/data</b>
   - 5️⃣ Verify the Mount
     - Run this command: <b>df -h</b>
-    
-
-
+    - ✅ You should see /mnt/data listed with 5GB available.
 ![image](https://github.com/user-attachments/assets/22cd959e-3bb9-42de-b794-4aa2e84fcb1b)
 
+- 🛠 Step 5: Take a Snapshot of EBS Volume
+   - 📍 Where? AWS Console → EC2 → EBS(Elastic Block Store ) → Volumes
+   - Select the attached EBS volume
+   - Click Actions → Create Snapshot
+  
+   - Enter Snapshot Name: MyVolumeSnapshot
+   - Click Create Snapshot ✅
+- ✅ Now you have a backup of your EBS volume!
+  #test
+- 🛠 Step 5: Take a Snapshot of EBS Volume
+### How to Take a Snapshot in AWS
+- Go to the AWS EC2 Console
+   -🔗 EC2 Dashboard → Elastic Block Store → Volumes
+- Select the EBS Volume You Want to Snapshot
+  - Find the volume attached to your EC2 instance (Linux or Windows).
+  - Right-click → Create Snapshot.
+  - Configure Snapshot Details
+   ![image](https://github.com/user-attachments/assets/385af653-df4e-4de5-a7b1-b671c00fc17c)
 
+Name & Description → Give a meaningful name like:
+"Windows-Data-Snapshot"
+"Linux-Data-Snapshot"
+Leave other settings default.
+Click Create Snapshot
 
-
-
-
+It will take some time depending on the volume size.
+Check progress in Snapshots tab under Elastic Block Store.
 
 
 
