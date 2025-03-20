@@ -60,8 +60,9 @@ VM connect with index.html output
  - Click Create Volume
    - Size: 5GB
    - Type: gp3 (General Purpose SSD)
+   - <b>Availability Zone: Same as EC2 instance</b>
  - Click Create
-  ![image](https://github.com/user-attachments/assets/0f2af0a9-5a08-48d0-b435-a8e1464173ca) 
+  ![image](https://github.com/user-attachments/assets/36657366-bff0-4111-bed0-7db9f2b5a74b)
  - Select the created volume → Click Actions → Attach Volume
  - Select your Linux or Windows EC2 instance
  - Click Attach ✅
