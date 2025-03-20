@@ -340,3 +340,5 @@ new instance
 - 5️⃣ Right-click the volume → Choose Change Drive Letter & Paths.
 - 6️⃣ Assign a letter (e.g., E:) and click OK.
 - 7️⃣ Open File Explorer → Check if your backup file is restored! 🎉
+
+![image](https://github.com/user-attachments/assets/659aefb3-79a6-4e08-97f6-3cf3fccd970f)
