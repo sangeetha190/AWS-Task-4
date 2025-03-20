@@ -342,3 +342,12 @@ new instance
 - 7️⃣ Open File Explorer → Check if your backup file is restored! 🎉
 
 ![image](https://github.com/user-attachments/assets/659aefb3-79a6-4e08-97f6-3cf3fccd970f)
+- Steps You Completed
+- Created a Windows EC2 Instance – Successfully launched.
+- Created a new EBS Volume (5GB) and attached it to the Instance – This became Volume S:
+- Created a test file (Sangeetha_text_file.txt) in the attached volume (S:).
+- Took a snapshot of the attached volume (S:) – Successfully completed.
+- Created a new EBS volume from the snapshot – Successfully completed.
+- Detached the old volume (S:) and attached the new snapshot volume to the same Windows instance.
+- Checked if the file (Sangeetha_text_file.txt) exists in the attached volume (D: or S:)
+- ✅ File is present, meaning backup restoration worked correctly!
