@@ -1,7 +1,7 @@
 # AWS-Task-4
 - 1️⃣ Launch EC2 Instances (Linux & Windows)
 - 2️⃣ Set Up a Web Server on Both Instances
-- 3️⃣ Create and Attach a 5GB EBS Volume
+- 3️⃣ Create and Attach a 5GB EBS Volume Windows and Linux Instance
 - 4️⃣ Format & Mount the Volume on Linux & Windows
 - 5️⃣ Take a Snapshot of the EBS Volume
 - 6️⃣ Create a New EBS Volume from the Snapshot & Attach It
@@ -108,8 +108,20 @@ VM connect with index.html output
    ![image](https://github.com/user-attachments/assets/f15a373a-e2ed-43be-bee4-cf1083a00306)
    ![image](https://github.com/user-attachments/assets/bb876aa6-c277-4a52-8b98-de6bebd4fd26)
 
-
-- 🛠 Step 4: Format & Mount the EBS Volume
+### Create a New EBS Volume for Linux
+- Go to AWS Console → Open EC2 Dashboard
+- In the left menu, click "Volumes" under Elastic Block Store (EBS).
+- Click "Create Volume"
+- Set the following values:
+   - Volume Type → General Purpose SSD (gp3)
+   - Size → 5 GiB
+   - Availability Zone → Must match the Linux instance AZ
+   - Example: If your Linux instance is in ap-south-1a, the volume should also be in ap-south-1a.
+- Click "Create Volume" ✅
+🎉 Now you have created the Linux EBS volume!
+![image](https://github.com/user-attachments/assets/092cfd2d-2d23-4492-8d93-c5dc49a94417)
+![image](https://github.com/user-attachments/assets/1523c947-b0ac-4b5f-8760-951f18c04df0)
+### 🛠 Attach the EBS Volume to Linux Instance
 - 🔹 For Linux:
   - 📍 Where? Connect via SSH
    - Check the attached volume:
@@ -122,11 +134,28 @@ VM connect with index.html output
    - sudo mount /dev/xvdf /mydata</b>
  - Make it permanent (optional):
    - <b>echo "/dev/xvdf /mydata ext4 defaults,nofail 0 2" | sudo tee -a /etc/fstab</b>
- - xvb
- - vcn
+![image](https://github.com/user-attachments/assets/69b517f4-424c-422a-b034-0b99a3493e99)
+- Next Steps: Format & Mount the EBS Volume
+   - 1️⃣ Check if the Volume is Recognized
+     - You already did this with: <b>lsblk</b>
+   - 2️⃣ Format the Volume (EXT4)
+     - Run this command to format the disk:
+  - <b>sudo mkfs -t ext4 /dev/xvdf</b>
+    - ⚠ Warning: This will erase any data on the disk.
+  - 3️⃣ Create a Directory for Mounting
+    - We need a directory where we can attach (mount) this volume:
+    - <b>sudo mkdir /mnt/data</b>
+  - 4️⃣ Mount the Volume
+    - Now, attach the volume to the /mnt/data directory:
+    - <b>sudo mount /dev/xvdf /mnt/data</b>
+  - 5️⃣ Verify the Mount
+    - Run this command: <b>df -h</b>
+    
 
 
- - 
+![image](https://github.com/user-attachments/assets/22cd959e-3bb9-42de-b794-4aa2e84fcb1b)
+
+
 
 
 
