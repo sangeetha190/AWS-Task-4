@@ -56,3 +56,16 @@ VM connect with index.html output
    - Verify by opening the public IP in a browser ✅
 ![image](https://github.com/user-attachments/assets/1eb5e079-6fd0-48a3-aa95-4b0b18c8886f)
 🛠 Step 3: Create & Attach a 5GB EBS Volume
+- 📍 Where? AWS Console → EC2 → Volumes → Create Volume
+ - Click Create Volume
+   - Size: 5GB
+   - Type: gp3 (General Purpose SSD)
+ - Click Create
+  ![image](https://github.com/user-attachments/assets/0f2af0a9-5a08-48d0-b435-a8e1464173ca) 
+ - Select the created volume → Click Actions → Attach Volume
+ - Select your Linux or Windows EC2 instance
+ - Click Attach ✅
+   - ✅ The volume is now attached but needs to be formatted and mounted.
+  ![image](https://github.com/user-attachments/assets/334e188a-7b81-4b1e-908e-6789b994ffa7)
+
+
