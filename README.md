@@ -156,15 +156,6 @@ VM connect with index.html output
 ![image](https://github.com/user-attachments/assets/22cd959e-3bb9-42de-b794-4aa2e84fcb1b)
 
 - 🛠 Step 5: Take a Snapshot of EBS Volume
-   - 📍 Where? AWS Console → EC2 → EBS(Elastic Block Store ) → Volumes
-   - Select the attached EBS volume
-   - Click Actions → Create Snapshot
-  
-   - Enter Snapshot Name: MyVolumeSnapshot
-   - Click Create Snapshot ✅
-- ✅ Now you have a backup of your EBS volume!
-  #test
-- 🛠 Step 5: Take a Snapshot of EBS Volume
 ### How to Take a Snapshot in AWS
 - Go to the AWS EC2 Console
    -🔗 EC2 Dashboard → Elastic Block Store → Volumes
@@ -226,8 +217,16 @@ After Attaching, Verify in Windows
 ![image](https://github.com/user-attachments/assets/5798aec7-14d0-409d-bfde-2633add94048)
 
 
+![image](https://github.com/user-attachments/assets/4fee2731-b29f-48d0-a480-4e1fba594f5a)
+Step 7: Take a Snapshot of the New Volume
+Since you have two new volumes (D: and S:), decide which one to snapshot.
 
-
+📌 How to Take a Snapshot in AWS
+1️⃣ Go to EC2 Dashboard → Elastic Block Store (EBS) → Volumes.
+2️⃣ Select the volume you want to take a snapshot of (e.g., D: or S:).
+3️⃣ Click "Actions" → "Create Snapshot".
+4️⃣ Enter a name/description (e.g., "Windows-Snapshot").
+5️⃣ Click "Create Snapshot" and wait for completion.
 
 
 
